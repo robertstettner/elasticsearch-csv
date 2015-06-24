@@ -1,4 +1,4 @@
-# ElasticsearchCSV [![Build Status](https://secure.travis-ci.org/robertstettner/elasticsearch-csv.svg?branch=master)](http://travis-ci.org/robertstettner/elasticsearch-csv)
+# ElasticsearchCSV [![Build Status](https://secure.travis-ci.org/robertstettner/elasticsearch-csv.svg?branch=master)](http://travis-ci.org/robertstettner/elasticsearch-csv) [![Coverage Status](https://coveralls.io/repos/robertstettner/elasticsearch-csv/badge.svg)](https://coveralls.io/r/robertstettner/elasticsearch-csv)
 
 A simple Elasticsearch CSV importer node.js library.
 

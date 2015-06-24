@@ -2,12 +2,6 @@
   "name": "elasticsearch-csv",
   "version": "0.0.1",
   "description": "A simple Elasticsearch CSV importer",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Robert Stettner <robert.stettner@gmail.com>",
-  "license": "MIT",
   "dependencies": {
     "bluebird": "^2.9.30",
     "elasticsearch": "^5.0.0",
@@ -24,6 +18,21 @@
     "mocha": "^1.21.4",
     "should": "^4.0.4",
     "should-promised": "^0.2.1",
-    "sinon": "^1.10.3"
-  }
+    "sinon": "^1.10.3",
+    "coveralls": "^2.11.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertstettner/elasticsearch-csv.git"
+  },
+  "author": "Robert Stettner <robert.stettner@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertstettner/elasticsearch-csv/issues"
+  },
+  "homepage": "https://github.com/robertstettner/elasticsearch-csv"
 }
