@@ -110,13 +110,18 @@ describe('ElasticsearchCSV', function() {
 
                     var promise = esCSV.parse();
 
+                    var i = 0;
+
                     promise.should.be.a.Promise;
                     promise.should.be.fulfilled;
                     promise.should.be.eventually.an.Object;
-                    promise.should.eventually.have.property('body').and.be.an.Array.and.have.lengthOf(6);
-                    promise.should.eventually.have.property('body').and.matchEach(function (it, i) {
+                    promise.should.eventually.have.property('body').and.be.an.Array;
+                    promise.should.eventually.have.property('body').with.lengthOf(6);
+                    promise.should.eventually.have.property('body').and.matchEach(function (it) {
                         if ((i % 2) === 0) {
-                            it.should.be.an.Object.with.property('index').and.be.an.Object.with.keys([
+                            it.should.be.an.Object;
+                            it.should.have.property('index').and.be.an.Object;
+                            it.index.should.have.keys([
                                 '_id',
                                 '_index',
                                 '_type'
@@ -124,7 +129,8 @@ describe('ElasticsearchCSV', function() {
                             it.index._index.should.be.equal('my_index');
                             it.index._type.should.be.equal('my_type');
                         } else {
-                            it.should.be.an.Object.and.have.keys([
+                            it.should.be.an.Object;
+                            it.should.have.keys([
                                 'id',
                                 'first_name',
                                 'last_name',
@@ -134,6 +140,7 @@ describe('ElasticsearchCSV', function() {
                                 'weight'
                             ]);
                         }
+                        i += 1;
                     });
 
                     done();
@@ -171,13 +178,18 @@ describe('ElasticsearchCSV', function() {
 
                     var promise = esCSV.parse();
 
+                    var i = 0;
+
                     promise.should.be.a.Promise;
                     promise.should.be.fulfilled;
-                    promise.should.be.eventually.an.Object;
-                    promise.should.eventually.have.property('body').and.be.an.Array.and.have.lengthOf(6);
-                    promise.should.eventually.have.property('body').and.matchEach(function (it, i) {
+                    promise.should.eventually.be.an.Object;
+                    promise.should.eventually.have.property('body').and.be.an.Array;
+                    promise.should.eventually.have.property('body').with.lengthOf(6);
+                    promise.should.eventually.have.property('body').and.matchEach(function (it) {
                         if ((i % 2) === 0) {
-                            it.should.be.an.Object.with.property('index').and.be.an.Object.with.keys([
+                            it.should.be.an.Object;
+                            it.should.have.property('index').and.be.an.Object;
+                            it.index.should.have.keys([
                                 '_id',
                                 '_index',
                                 '_type'
@@ -185,7 +197,8 @@ describe('ElasticsearchCSV', function() {
                             it.index._index.should.be.equal('my_index');
                             it.index._type.should.be.equal('my_type');
                         } else {
-                            it.should.be.an.Object.and.have.keys([
+                            it.should.be.an.Object;
+                            it.should.have.keys([
                                 'id',
                                 'first_name',
                                 'last_name',
@@ -195,6 +208,7 @@ describe('ElasticsearchCSV', function() {
                                 'weight'
                             ]);
                         }
+                        i += 1;
                     });
 
                     done();
@@ -225,13 +239,18 @@ describe('ElasticsearchCSV', function() {
 
                     var promise = esCSV.parse();
 
+                    var i = 0;
+
                     promise.should.be.a.Promise;
                     promise.should.be.fulfilled;
-                    promise.should.be.eventually.an.Object;
-                    promise.should.eventually.have.property('body').and.be.an.Array.and.have.lengthOf(6);
-                    promise.should.eventually.have.property('body').and.matchEach(function (it, i) {
+                    promise.should.eventually.be.an.Object;
+                    promise.should.eventually.have.property('body').and.be.an.Array;
+                    promise.should.eventually.have.property('body').with.lengthOf(6);
+                    promise.should.eventually.have.property('body').and.matchEach(function (it) {
                         if ((i % 2) === 0) {
-                            it.should.be.an.Object.with.property('index').and.be.an.Object.with.keys([
+                            it.should.be.an.Object;
+                            it.should.have.property('index').and.be.an.Object;
+                            it.index.should.have.keys([
                                 '_id',
                                 '_index',
                                 '_type'
@@ -239,7 +258,8 @@ describe('ElasticsearchCSV', function() {
                             it.index._index.should.be.equal('my_index');
                             it.index._type.should.be.equal('my_type');
                         } else {
-                            it.should.be.an.Object.and.have.keys([
+                            it.should.be.an.Object;
+                            it.should.have.keys([
                                 'id',
                                 'first_name',
                                 'last_name',
@@ -249,6 +269,7 @@ describe('ElasticsearchCSV', function() {
                                 'weight'
                             ]);
                         }
+                        i += 1;
                     });
 
                     done();
@@ -286,13 +307,20 @@ describe('ElasticsearchCSV', function() {
 
                     var promise = esCSV.parse();
 
+                    var i = 0;
+
                     promise.should.be.a.Promise;
                     promise.should.be.fulfilled;
-                    promise.should.be.eventually.an.Object;
-                    promise.should.eventually.have.property('body').and.be.an.Array.and.have.lengthOf(6);
-                    promise.should.eventually.have.property('body').and.matchEach(function (it, i) {
+                    promise.should.eventually.be.an.Object;
+                    promise.should.eventually.have.property('body').and.be.an.Array;
+                    promise.should.eventually.have.property('body').with.lengthOf(6);
+                    promise.should.eventually.have.property('body').and.matchEach(function (it) {
+
+                        it.should.be.an.Object;
+
                         if ((i % 2) === 0) {
-                            it.should.be.an.Object.with.property('index').and.be.an.Object.with.keys([
+                            it.should.have.property('index').and.be.an.Object;
+                            it.index.should.have.keys([
                                 '_id',
                                 '_index',
                                 '_type'
@@ -300,7 +328,7 @@ describe('ElasticsearchCSV', function() {
                             it.index._index.should.be.equal('my_index');
                             it.index._type.should.be.equal('my_type');
                         } else {
-                            it.should.be.an.Object.and.have.keys([
+                            it.should.have.keys([
                                 'id',
                                 'first_name',
                                 'last_name',
@@ -310,6 +338,7 @@ describe('ElasticsearchCSV', function() {
                                 'weight'
                             ]);
                         }
+                        i += 1;
                     });
 
                     done();
