@@ -1,0 +1,29 @@
+{
+  "name": "elasticsearch-csv",
+  "version": "0.0.1",
+  "description": "A simple Elasticsearch CSV importer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Stettner <robert.stettner@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.30",
+    "elasticsearch": "^5.0.0",
+    "fast-csv": "^0.6.0",
+    "lodash": "^3.9.3",
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-mocha-istanbul": "^2.1.0",
+    "istanbul": "^0.3.2",
+    "mocha": "^1.21.4",
+    "should": "^4.0.4",
+    "should-promised": "^0.2.1",
+    "sinon": "^1.10.3"
+  }
+}
