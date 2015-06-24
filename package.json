@@ -25,7 +25,19 @@
     "type": "git",
     "url": "https://github.com/robertstettner/elasticsearch-csv.git"
   },
-  "author": "Robert Stettner <robert.stettner@gmail.com>",
+  "keywords": [
+    "csv",
+    "elasticsearch",
+    "elastic",
+    "import",
+    "importer",
+    "csv import",
+    "CSV"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "author": "Robert Stettner",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/robertstettner/elasticsearch-csv/issues"

@@ -3,8 +3,8 @@
 A simple Elasticsearch CSV importer node.js library.
 
 Features:
-- Import any text file with a delimiter
-- Uses Elasticsearch options and bulk request API
+- Import any text file using [Fast-csv](https://github.com/C2FO/fast-csv), its options for delimiters, headers, etc.
+- Uses the official [Elasticsearch](https://github.com/elastic/elasticsearch-js) library, its options and bulk request API
 
 ## Getting Started
 
@@ -36,3 +36,7 @@ esCSV.import()
 
 ### 0.0.1
 - Initial release
+
+## License
+
+MIT <https://github.com/robertstettner/elasticsearch-csv/raw/master/LICENSE>
