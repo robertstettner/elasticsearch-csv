@@ -1,12 +1,16 @@
+general:
+    artifacts:
+        - "reports"
+
 machine:
     node:
         version: 0.12.9
     environment:
-        CIRCLE_TEST_REPORTS: "reports/"
+        CIRCLE_TEST_REPORTS: reports
 
 dependencies:
-    cache_directories:
-        - "node_modules"
+    pre:
+        - npm install -g grunt-cli
 
 test:
     override:
