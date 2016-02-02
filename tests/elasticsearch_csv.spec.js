@@ -1,5 +1,5 @@
 var ElasticsearchCSV = require('../lib/elasticsearch_csv');
-var should = require('should-promised');
+var should = require('should');
 var sinon = require('sinon');
 var Promise = require('bluebird');
 
