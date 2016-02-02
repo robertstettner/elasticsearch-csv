@@ -45,3 +45,7 @@ esCSV.import()
 MIT <https://github.com/robertstettner/elasticsearch-csv/raw/master/LICENSE>
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/robertstettner/elasticsearch-csv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/robertstettner/elasticsearch-csv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
