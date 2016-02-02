@@ -38,7 +38,7 @@ module.exports = function(grunt) {
             circle: {
                 options: {
                     reporter: 'xunit',
-                    captureFile: 'reports/test-results.xml',
+                    captureFile: 'reports/xunit/test-results.xml',
                     quiet: true
                 },
                 src: ['tests/**/*.spec.js']
