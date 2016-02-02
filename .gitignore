@@ -8,4 +8,5 @@ npm-debug.log
 *.swp
 .settings
 coverage/
+reports/
 desktop.ini

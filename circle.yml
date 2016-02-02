@@ -1,0 +1,13 @@
+machine:
+    node:
+        version: 0.12.9
+    environment:
+        CIRCLE_TEST_REPORTS: "reports/"
+
+dependencies:
+    cache_directories:
+        - "node_modules"
+
+test:
+    override:
+        - grunt circle
