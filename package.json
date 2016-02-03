@@ -16,6 +16,7 @@
     "grunt-mocha-istanbul": "3.0.1",
     "grunt-mocha-test": "0.12.7",
     "mocha": "2.4.5",
+    "mocha-junit-reporter": "1.9.1",
     "istanbul": "0.4.2",
     "should": "8.2.1",
     "sinon": "1.17.3"

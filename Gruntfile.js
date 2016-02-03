@@ -37,8 +37,10 @@ module.exports = function(grunt) {
         mochaTest: {
             circle: {
                 options: {
-                    reporter: 'xunit',
-                    captureFile: 'reports/xunit/test-results.xml',
+                    reporter: 'mocha-junit-reporter',
+                    reporterOptions: {
+                        mochaFile: 'reports/junit/test-results.xml'
+                    },
                     quiet: true
                 },
                 src: ['tests/**/*.spec.js']
