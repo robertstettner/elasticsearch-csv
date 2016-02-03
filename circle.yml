@@ -5,8 +5,6 @@ general:
 machine:
     node:
         version: 0.12.9
-    environment:
-        CIRCLE_TEST_REPORTS: reports
 
 dependencies:
     pre:
@@ -15,3 +13,6 @@ dependencies:
 test:
     override:
         - grunt circle
+    post:
+        - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+        - find . -type f -regex ".*/reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
