@@ -66,7 +66,7 @@ describe('ElasticsearchCSV', function() {
 
             (function() {
                 new ElasticsearchCSV(options);
-            }).should.throw('ENOENT, no such file or directory \'/foo/bar.txt\'');
+            }).should.throw(/ENOENT[,|:] no such file or directory/);
 
             done();
         });
@@ -206,6 +206,68 @@ describe('ElasticsearchCSV', function() {
                                 'country',
                                 'height',
                                 'weight'
+                            ]);
+                        }
+                        i += 1;
+                    });
+
+                    done();
+                });
+            });
+            describe('with json', function () {
+                it('should fail with an error when headers option is not set', function (done){
+
+                    var options = { es: { index: 'my_index', type: 'my_type' }, csv: { filePath: 'fixtures/csv_with_json.csv' } };
+
+                    var esCSV = new ElasticsearchCSV(options);
+
+                    var promise = esCSV.parse();
+
+                    promise.should.be.a.Promise;
+                    promise.should.be.rejectedWith('Data and/or options have no headers specified');
+
+                    done();
+                });
+
+                it('should parse the file and create the request object', function (done){
+
+                    var options = { es: { index: 'my_index', type: 'my_type' }, csv: { filePath: 'fixtures/csv_with_json.csv', headers: true } };
+
+                    var esCSV = new ElasticsearchCSV(options);
+
+                    var promise = esCSV.parse();
+
+                    var i = 0;
+
+                    promise.should.be.a.Promise;
+                    promise.should.be.fulfilled;
+                    promise.should.be.eventually.an.Object;
+                    promise.should.eventually.have.property('body').and.be.an.Array;
+                    promise.should.eventually.have.property('body').with.lengthOf(6);
+                    promise.should.eventually.have.property('body').and.matchEach(function (it) {
+                        if ((i % 2) === 0) {
+                            it.should.be.an.Object;
+                            it.should.have.property('index').and.be.an.Object;
+                            it.index.should.have.keys([
+                                '_id',
+                                '_index',
+                                '_type'
+                            ]);
+                            it.index._index.should.be.equal('my_index');
+                            it.index._type.should.be.equal('my_type');
+                        } else {
+                            it.should.be.an.Object;
+                            it.should.have.keys([
+                                'id',
+                                'first_name',
+                                'last_name',
+                                'email',
+                                'location'
+                            ]);
+                            it.location.should.be.an.Object;
+                            it.location.should.have.keys([
+                                'type',
+                                'coordinates'
                             ]);
                         }
                         i += 1;

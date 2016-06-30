@@ -1,0 +1,4 @@
+id,first_name,last_name,email,location
+1,Ruby,Fuller,rfuller0@csmonitor.com,"{""type"":""polygon"",""coordinates"":[[[15.2051,-0.0385],[13.299,-2.0924],[17.1167,-2.6632],[18.1879,0.1538],[15.2051,-0.0385]]]}"
+2,Ann,Richards,arichards1@surveymonkey.com,"{""type"":""polygon"",""coordinates"":[[[15.2051,-0.0385],[13.299,-2.0924],[17.1167,-2.6632],[18.1879,0.1538],[15.2051,-0.0385]]]}"
+3,Frank,Simmons,fsimmons2@webeden.co.uk,"{""type"":""polygon"",""coordinates"":[[[15.2051,-0.0385],[13.299,-2.0924],[17.1167,-2.6632],[18.1879,0.1538],[15.2051,-0.0385]]]}"
