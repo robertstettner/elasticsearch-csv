@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-csv",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple Elasticsearch CSV importer",
   "dependencies": {
     "bluebird": "3.4.1",
@@ -43,7 +43,10 @@
   "engines": {
     "node": ">=0.10"
   },
-  "author": "Robert Stettner",
+  "author": "Robert Stettner <robert.stettner@gmail.com> (https://github.com/robertstettner)",
+  "contributors": [
+    "Raúl Requero <rareq1987@gmail.com> (https://github.com/rrequero)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/robertstettner/elasticsearch-csv/issues"

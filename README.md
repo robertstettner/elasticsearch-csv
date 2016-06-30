@@ -1,5 +1,5 @@
-# ElasticsearchCSV</br>[![Build Status](https://secure.travis-ci.org/robertstettner/elasticsearch-csv.svg?branch=master)](http://travis-ci.org/robertstettner/elasticsearch-csv) [![Coverage Status](https://coveralls.io/repos/robertstettner/elasticsearch-csv/badge.svg)](https://coveralls.io/r/robertstettner/elasticsearch-csv) [![Dependency Status](https://david-dm.org/robertstettner/elasticsearch-csv.svg)](https://david-dm.org/robertstettner/elasticsearch-csv) [![devDependency Status](https://david-dm.org/robertstettner/elasticsearch-csv/dev-status.svg)](https://david-dm.org/robertstettner/elasticsearch-csv#info=devDependencies)
-
+ElasticsearchCSV<br/>[![Npm Version](https://img.shields.io/npm/v/elasticsearch-csv.svg)](https://www.npmjs.com/package/elasticsearch-csv)[![Build Status](https://secure.travis-ci.org/robertstettner/elasticsearch-csv.svg?branch=master)](http://travis-ci.org/robertstettner/elasticsearch-csv)[![Coverage Status](https://coveralls.io/repos/robertstettner/elasticsearch-csv/badge.svg)](https://coveralls.io/r/robertstettner/elasticsearch-csv)[![Dependency Status](https://david-dm.org/robertstettner/elasticsearch-csv.svg)](https://david-dm.org/robertstettner/elasticsearch-csv)[![devDependency Status](https://david-dm.org/robertstettner/elasticsearch-csv/dev-status.svg)](https://david-dm.org/robertstettner/elasticsearch-csv#info=devDependencies)
+==========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 A simple Elasticsearch CSV importer node.js library.
 
 Features:
@@ -34,6 +34,9 @@ esCSV.import()
 
 ## Release notes
 
+### 0.0.3
+- Added support to parse columns of JSON type
+
 ### 0.0.2
 - Updated dependencies
 
@@ -43,5 +46,3 @@ esCSV.import()
 ## License
 
 MIT <https://github.com/robertstettner/elasticsearch-csv/raw/master/LICENSE>
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/robertstettner/elasticsearch-csv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
