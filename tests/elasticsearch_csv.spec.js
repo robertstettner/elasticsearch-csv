@@ -66,7 +66,7 @@ describe('ElasticsearchCSV', function() {
 
             (function() {
                 new ElasticsearchCSV(options);
-            }).should.throw('ENOENT, no such file or directory \'/foo/bar.txt\'');
+            }).should.throw(/ENOENT[,|:] no such file or directory/);
 
             done();
         });
